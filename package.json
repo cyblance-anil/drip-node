@@ -1,0 +1,31 @@
+{
+  "name": "drip",
+  "version": "0.0.1",
+  "description": "Node client for Drip Api https://www.drip.co/",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard && NODE_ENV=test jasmine"
+  },
+  "repository": {
+    "url": "git+ssh://git@github.com/crowdcst/drip-node.git",
+    "type": "git"
+  },
+  "keywords": [
+    "drip",
+    "api"
+  ],
+  "author": "Dylan Jhaveri <dylanjhaveri@gmail.com> (https://www.twitter.com/dylanjha)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crowdcst/drip-node/issues"
+  },
+  "homepage": "https://github.com/crowdcst/drip-node#readme",
+  "dependencies": {
+    "debug": "^2.3.2",
+    "request": "^2.78.0"
+  },
+  "devDependencies": {
+    "jasmine": "^2.5.2",
+    "standard": "^8.5.0"
+  }
+}
