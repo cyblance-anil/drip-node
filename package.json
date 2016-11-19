@@ -2,7 +2,7 @@
   "name": "drip",
   "version": "0.0.1",
   "description": "Node client for Drip Api https://www.drip.co/",
-  "main": "index.js",
+  "main": "drip.js",
   "scripts": {
     "test": "standard && NODE_ENV=test jasmine"
   },
@@ -15,7 +15,7 @@
     "api"
   ],
   "author": "Dylan Jhaveri <dylanjhaveri@gmail.com> (https://www.twitter.com/dylanjha)",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/crowdcst/drip-node/issues"
   },
