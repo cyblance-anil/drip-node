@@ -10,7 +10,7 @@ describe('Client', function () {
     expect(client.apiKey).toEqual('my-api-key')
     expect(client.accountId).toEqual('my-account-id')
     expect(typeof client.accounts).toEqual('function')
-    expect(typeof client.track_event).toEqual('function')
+    expect(typeof client.trackEvent).toEqual('function')
   })
 
   it('should return a client missingCredentials state if none are given', function () {
