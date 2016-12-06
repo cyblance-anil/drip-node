@@ -2,8 +2,8 @@
 
 const Client = require('./lib/client')
 
-function init (apiKey, accountId, options) {
-  const client = new Client(apiKey, accountId, options)
+function init (options) {
+  const client = new Client(options)
   return client
 }
 

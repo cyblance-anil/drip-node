@@ -91,6 +91,10 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
+bluebird@^3.4.1:
+  version "3.4.6"
+  resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.4.6.tgz#01da8d821d87813d158967e743d5fe6c62cf8c0f"
+
 boom@2.x.x:
   version "2.10.1"
   resolved "https://registry.yarnpkg.com/boom/-/boom-2.10.1.tgz#39c8918ceff5799f83f9492a848f625add0c766f"
@@ -740,7 +744,7 @@ levn@^0.3.0, levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
-lodash@^4.0.0, lodash@^4.3.0:
+lodash@^4.0.0, lodash@^4.13.1, lodash@^4.3.0:
   version "4.17.2"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.2.tgz#34a3055babe04ce42467b607d700072c7ff6bf42"
 
@@ -929,6 +933,20 @@ request:
     tough-cookie "~2.3.0"
     tunnel-agent "~0.4.1"
 
+request-promise:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/request-promise/-/request-promise-4.1.1.tgz#26021e4f6f56fd4c309f6bf1ebd8c97a95ac1fb5"
+  dependencies:
+    bluebird "^3.4.1"
+    request-promise-core "1.1.1"
+    stealthy-require "^1.0.0"
+
+request-promise-core@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/request-promise-core/-/request-promise-core-1.1.1.tgz#3eee00b2c5aa83239cfb04c5700da36f81cd08b6"
+  dependencies:
+    lodash "^4.13.1"
+
 require-uncached@^1.0.2:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/require-uncached/-/require-uncached-1.0.3.tgz#4e0d56d6c9662fd31e43011c4b95aa49955421d3"
@@ -1022,6 +1040,10 @@ standard-engine@~5.1.0:
     home-or-tmp "^2.0.0"
     minimist "^1.1.0"
     pkg-config "^1.0.1"
+
+stealthy-require@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/stealthy-require/-/stealthy-require-1.0.0.tgz#1a8ed8fc19a8b56268f76f5a1a3e3832b0c26200"
 
 string_decoder@~0.10.x:
   version "0.10.31"

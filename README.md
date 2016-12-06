@@ -24,17 +24,23 @@ npm i drip --save
 ## Authentication
 
 For private integrations, you may use your personal API key (found
-[here](https://www.getdrip.com/user/edit)) via the `api_key` setting:
+[here](https://www.getdrip.com/user/edit)) via the `apiKey` option:
 
 ```javascript
-client = require('drip')("YOUR_API_KEY", "YOUR_ACCOUNT_ID")
+client = require('drip')({
+  apiKey: "YOUR_API_KEY",
+  accountId: "YOUR_ACCOUNT_ID"
+})
 ```
 
-For public integrations, pass in the user's OAuth token via the `access_token`
-setting:
+For public integrations, pass in the user's OAuth token via the `accessToken`
+option:
 
 ```javascript
-client = require('drip')("YOUR_ACCESS_TOKEN", "YOUR_ACCOUNT_ID")
+client = require('drip')({
+  accessToken: "YOUR_API_KEY",
+  accountId: "YOUR_ACCOUNT_ID"
+})
 ```
 
 Your account ID can be found [here](https://www.getdrip.com/settings/site).
@@ -47,10 +53,27 @@ the "list accounts" endpoint.
 Since the Drip client is a flat API client, most API actions are available
 as methods on the client object. The following methods are currently available:
 
-| Action                     | Method                                               |
-| :------------------------- | :--------------------------------------------------- |
-| List accounts              | `client.accounts()`                                  |
-| Track an event             | `client.trackEvent(email, action, properties = {})`  |
+| Action                     | Method                                                    |
+| :------------------------- | :---------------------------------------------------------|
+| List accounts              | `client.accounts(callback)`                               |
+| Track an event             | `client.trackEvent(email, action, properties, callback)`  |
+
+* All methods return promises and also support an asynchronous callback. For example:
+
+```javacript
+// promises
+client.accounts().then(function (response) {
+  // response
+}).catch(function (error) {
+  // error
+})
+
+// callbacks
+client.accounts(function (error, response) {
+  // if (error) // handle error
+  // response
+})
+```
 
 
 **Note:** We do not have complete API coverage yet. If we are missing an API method
