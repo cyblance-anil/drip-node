@@ -58,6 +58,13 @@ that you need to use in your application, please file an issue and/or open a
 pull request. [See the official REST API docs](https://www.getdrip.com/docs/rest-api)
 for a complete API reference.
 
+## Debugging
+
+This library follows the [debug logger](https://www.npmjs.com/package/debug) standard for optional logger output. To see logger output from this library set DEBUG env variable to 'drip'. For example to see log output in tests:
+
+```
+DEBUG=drip npm test
+```
 
 ## Contributing
 
