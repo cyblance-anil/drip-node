@@ -1,12 +1,13 @@
 /* eslint-env jasmine */
 
+'use strict'
+
 const clientSpy = require('../support/client_spy')
 const Account = require('../../lib/account')
 
 describe('account', function () {
   beforeEach(function () {
     this.client = clientSpy({apiKey: 'my-api-key', accountId: 'my-account-id'})
-    console.log('debug', this.client)
     this.account = new Account(this.client)
   })
 

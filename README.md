@@ -12,13 +12,13 @@ Requirements:
 yarn
 
 ```
-yarn add drip
+yarn add drip-api
 ```
 
 npm
 
 ```
-npm i drip --save
+npm i drip-api --save
 ```
 
 ## Authentication
@@ -27,7 +27,7 @@ For private integrations, you may use your personal API key (found
 [here](https://www.getdrip.com/user/edit)) via the `apiKey` option:
 
 ```javascript
-client = require('drip')({
+client = require('drip-api')({
   apiKey: "YOUR_API_KEY",
   accountId: "YOUR_ACCOUNT_ID"
 })
@@ -37,7 +37,7 @@ For public integrations, pass in the user's OAuth token via the `accessToken`
 option:
 
 ```javascript
-client = require('drip')({
+client = require('drip-api')({
   accessToken: "YOUR_API_KEY",
   accountId: "YOUR_ACCOUNT_ID"
 })
@@ -53,10 +53,10 @@ the "list accounts" endpoint.
 Since the Drip client is a flat API client, most API actions are available
 as methods on the client object. The following methods are currently available:
 
-| Action                     | Method                                                    |
-| :------------------------- | :---------------------------------------------------------|
-| List accounts              | `client.accounts(callback)`                               |
-| Track an event             | `client.trackEvent(email, action, properties, callback)`  |
+| Action                     | Method                                                             |
+| :------------------------- | :------------------------------------------------------------------|
+| List accounts              | `client.accounts(callback)`                                        |
+| Track an event             | `client.trackEvent(email, action, properties, options, callback)`  |
 
 * All methods return promises and also support an asynchronous callback. For example:
 

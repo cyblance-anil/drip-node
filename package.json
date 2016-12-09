@@ -1,10 +1,10 @@
 {
-  "name": "drip",
+  "name": "drip-api",
   "version": "0.0.1",
   "description": "Node client for Drip Api https://www.drip.co/",
   "main": "drip.js",
   "scripts": {
-    "test": "standard && NODE_ENV=test jasmine"
+    "test": "standard && NODE_ENV=test jasmine --captureExceptions"
   },
   "repository": {
     "url": "git+ssh://git@github.com/crowdcst/drip-node.git",
