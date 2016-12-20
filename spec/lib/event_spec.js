@@ -18,9 +18,10 @@ describe('event', function () {
         const lastReq = client.LAST_REQUEST
         expect(lastReq.method).toEqual('POST')
         expect(lastReq.url).toEqual(endpoint)
-        expect(lastReq.body.action).toEqual(action)
-        expect(lastReq.body.email).toEqual(email)
-        expect(lastReq.body.properties).toEqual({})
+        const event = lastReq.body.events[0]
+        expect(event.action).toEqual(action)
+        expect(event.email).toEqual(email)
+        expect(event.properties).toEqual({})
         done()
       }).catch(done.fail)
     })
@@ -30,9 +31,10 @@ describe('event', function () {
         const lastReq = client.LAST_REQUEST
         expect(lastReq.method).toEqual('POST')
         expect(lastReq.url).toEqual(endpoint)
-        expect(lastReq.body.action).toEqual(action)
-        expect(lastReq.body.email).toEqual(email)
-        expect(lastReq.body.properties).toEqual({type: 'this type'})
+        const event = lastReq.body.events[0]
+        expect(event.action).toEqual(action)
+        expect(event.email).toEqual(email)
+        expect(event.properties).toEqual({type: 'this type'})
         done()
       }).catch(done.fail)
     })
@@ -42,10 +44,11 @@ describe('event', function () {
         const lastReq = client.LAST_REQUEST
         expect(lastReq.method).toEqual('POST')
         expect(lastReq.url).toEqual(endpoint)
-        expect(lastReq.body.action).toEqual(action)
-        expect(lastReq.body.email).toEqual(email)
-        expect(lastReq.body.properties).toEqual({type: 'this type'})
-        expect(lastReq.body.occurred_at).toEqual('2016-12-08T03:00:00Z')
+        const event = lastReq.body.events[0]
+        expect(event.action).toEqual(action)
+        expect(event.email).toEqual(email)
+        expect(event.properties).toEqual({type: 'this type'})
+        expect(event.occurred_at).toEqual('2016-12-08T03:00:00Z')
         done()
       }).catch(done.fail)
     })
@@ -56,8 +59,9 @@ describe('event', function () {
         const lastReq = client.LAST_REQUEST
         expect(lastReq.method).toEqual('POST')
         expect(lastReq.url).toEqual(endpoint)
-        expect(lastReq.body.action).toEqual(action)
-        expect(lastReq.body.email).toEqual(email)
+        const event = lastReq.body.events[0]
+        expect(event.action).toEqual(action)
+        expect(event.email).toEqual(email)
         done()
       })
     })
@@ -68,8 +72,9 @@ describe('event', function () {
         const lastReq = client.LAST_REQUEST
         expect(lastReq.method).toEqual('POST')
         expect(lastReq.url).toEqual('https://api.getdrip.com/v2/my-account-id/events')
-        expect(lastReq.body.action).toEqual(action)
-        expect(lastReq.body.email).toEqual(email)
+        const event = lastReq.body.events[0]
+        expect(event.action).toEqual(action)
+        expect(event.email).toEqual(email)
         done()
       })
     })
