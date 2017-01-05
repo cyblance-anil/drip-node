@@ -38,8 +38,8 @@ option:
 
 ```javascript
 client = require('drip-api')({
-  accessToken: "YOUR_API_KEY",
-  accountId: "YOUR_ACCOUNT_ID"
+  accessToken: "YOUR_ACCESS_TOKEN", // obtained from oauth
+  accountId: "YOUR_ACCOUNT_ID"      // obtained from oauth
 })
 ```
 
@@ -60,7 +60,7 @@ as methods on the client object. The following methods are currently available:
 
 * All methods return promises and also support an asynchronous callback. For example:
 
-```javacript
+```javascript
 // promises
 client.accounts().then(function (response) {
   // response
