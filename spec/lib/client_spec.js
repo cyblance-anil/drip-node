@@ -11,6 +11,7 @@ describe('Client', function () {
     expect(client.accountId).toEqual('my-account-id')
     expect(typeof client.accounts).toEqual('function')
     expect(typeof client.trackEvent).toEqual('function')
+    expect(typeof client.trackEvents).toEqual('function')
   })
 
   it('should return a client missingCredentials state if none are given', function () {

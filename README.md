@@ -57,6 +57,7 @@ as methods on the client object. The following methods are currently available:
 | :------------------------- | :------------------------------------------------------------------|
 | List accounts              | `client.accounts(callback)`                                        |
 | Track an event             | `client.trackEvent(email, action, properties, options, callback)`  |
+| Track a batch of  events   | `client.trackEvents([<events array>])`  |
 
 * All methods return promises and also support an asynchronous callback. For example:
 

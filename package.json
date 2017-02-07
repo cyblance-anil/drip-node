@@ -22,6 +22,7 @@
   "homepage": "https://github.com/crowdcst/drip-node#readme",
   "dependencies": {
     "debug": "^2.3.2",
+    "lodash": "^4.17.4",
     "request": "^2.78.0",
     "request-promise": "^4.1.1"
   },

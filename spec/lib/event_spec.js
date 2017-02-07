@@ -79,4 +79,24 @@ describe('event', function () {
       })
     })
   })
+
+  describe('createBatch', function () {
+    it('should send all events to the batch api', function (done) {
+      const events = [
+        {email: 'test1@gmail.com', action: 'Did a thing'},
+        {email: 'test2@gmail.com', action: 'Did another thing'}
+      ]
+      event.createBatch(events).then(() => {
+        const lastReq = client.LAST_REQUEST
+        expect(lastReq.method).toEqual('POST')
+        expect(lastReq.url).toEqual('https://api.getdrip.com/v2/my-account-id/events/batches')
+        expect(lastReq.body).toEqual({
+          batches: [{
+            events: events
+          }]
+        })
+        done()
+      }).catch(done.fail)
+    })
+  })
 })
