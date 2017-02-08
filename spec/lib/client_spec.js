@@ -25,7 +25,7 @@ describe('Client', function () {
     it('should have the correct headers for basic auth', function () {
       const client = new Client({apiKey: 'my-api-key', accountId: 'my-account-id'})
       expect(client.requestHeaders()).toEqual({
-        'User-Agent': 'Drip Node 0.0.1',
+        'User-Agent': `Drip Node ${client.version}`,
         'Content-Type': 'application/vnd.api+json',
         Accept: '*/*'
       })
@@ -34,7 +34,7 @@ describe('Client', function () {
     it('should have the correct headers for bearer token auth', function () {
       const client = new Client({accessToken: 'my-access-token', accountId: 'my-account-id'})
       expect(client.requestHeaders()).toEqual({
-        'User-Agent': 'Drip Node 0.0.1',
+        'User-Agent': `Drip Node ${client.version}`,
         'Content-Type': 'application/vnd.api+json',
         Accept: '*/*',
         Authorization: 'Bearer my-access-token'
