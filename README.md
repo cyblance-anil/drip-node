@@ -6,8 +6,7 @@ A Node toolkit for the [Drip](https://www.getdrip.com/) API. Based on the offici
 
 Requirements:
 
-* npm v1.4.0 or newer
-* node v0.10 or newer
+* node v4 or newer
 
 yarn
 

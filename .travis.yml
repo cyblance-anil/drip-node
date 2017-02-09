@@ -7,7 +7,5 @@ node_js:
   - "4.4"
   - "6"
   - "6.1"
-  - "0.12"
-  - "iojs"
 cache:
   yarn: true
