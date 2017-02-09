@@ -1,5 +1,7 @@
 # Drip Node client library (unofficial)
 
+[![Build Status](https://travis-ci.org/crowdcst/drip-node.svg?branch=master)](https://travis-ci.org/crowdcst/drip-node)
+
 A Node toolkit for the [Drip](https://www.getdrip.com/) API. Based on the official [Ruby client library](https://github.com/DripEmail/drip-ruby): 
 
 ## Installation
