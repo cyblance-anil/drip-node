@@ -1,6 +1,6 @@
 {
   "name": "drip-api",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Node client for Drip Api https://www.drip.co/",
   "main": "drip.js",
   "scripts": {
